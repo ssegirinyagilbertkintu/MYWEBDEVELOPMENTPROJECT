@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.calculator {
+    width: 620px;
+    min-height: 970px;
+    background: #000000;
+    border: 10px solid #000000;
+    border-radius: 35px;
+    padding: 20px 30px 30px;
+}
+
+/* Welcome text */
+.welcome {
+    height: 95px;
+    background: #ffffff;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+/* Calculator display */
+.display {
+    height: 100px;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 10px 35px;
+    font-size: 48px;
+    overflow: hidden;
+}
+
+/* Button grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px 18px;
+}
+
+/* All buttons */
+button {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #292929;
+    color: #ffffff;
+
+    font-size: 38px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.1s, opacity 0.1s;
+}
+
+/* Grey function buttons */
+button.function {
+    background: #b0b0b0;
+    color: #000000;
+}
+
+/* Orange operator buttons */
+button.operator {
+    background: #ff9d00;
+    color: #ffffff;
+}
+
+/* Button hover */
+button:hover {
+    opacity: 0.85;
+}
+
+/* Button press */
+button:active {
+    transform: scale(0.94);
+}
+
+/* Responsive design */
+@media (max-width: 650px) {
+
+    .calculator {
+        width: 95%;
+        min-height: auto;
+        padding: 18px;
+        border-radius: 30px;
+    }
+
+    .welcome {
+        height: 70px;
+        font-size: 26px;
+        border-radius: 25px;
+    }
+
+    .display {
+        height: 90px;
+        font-size: 40px;
+        padding-right: 20px;
+    }
+
+    .buttons {
+        gap: 15px 10px;
+    }
+
+    button {
+        font-size: 28px;
+    }
+}
